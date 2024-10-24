@@ -1,16 +1,20 @@
 // Importer React
 import React, { useState } from 'react';
 
-// Importer komponenter
+// Import af komponenter
+import SidebarPipper from '../components/SideBarPipper';
 
-// Importer stylesheet 
-import '../App.css';
-
-// import logo from './logo.svg';
 
 function Pipper_version2() {
+
+  const Pipperstyle = {
+    backgroundColor: '#fff',
+    color: '#000'
+  }
   return (
-    <p>Hello World</p>
+    <div style={Pipperstyle}>
+    <SidebarPipper/>
+    </div>
   )
 }
 
