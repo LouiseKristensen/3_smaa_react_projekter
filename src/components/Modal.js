@@ -20,6 +20,9 @@ function Modal({ onSubmit, onClose }) {
   };
 
     return (
+      <div>
+         <button onclick="openModal(Modal)">Opret pip</button>
+         
       <div
       className="modal show"
       style={{ display: 'block', position: 'initial' }}
@@ -43,6 +46,7 @@ function Modal({ onSubmit, onClose }) {
           <Button variant="primary">Post pip</Button>
         </Modal.Footer>
       </Modal.Dialog>
+    </div>
     </div>
     );
   }
