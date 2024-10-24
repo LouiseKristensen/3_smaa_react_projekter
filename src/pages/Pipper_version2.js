@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 // Import af komponenter
 import SidebarPipper from '../components/SideBarPipper';
 import Feed from '../components/Feed';
-import  Modal from 'react-bootstrap/modal';
+import Modal from '../components/Modal';
+import Pip from '../components/Pip';
 
 
 function Pipper_version2() {
