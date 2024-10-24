@@ -13,7 +13,6 @@ root.render(
   
   <React.StrictMode>
     <App />
-    <Pipper_version2/>
   </React.StrictMode>
 );
 

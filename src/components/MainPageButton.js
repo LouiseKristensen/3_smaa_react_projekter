@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 function MainPageButton(props) {
     return (
         <div>
             <button>
-                <link>{props.message}</link>
+                <Link>{props.message}</Link>
             </button>
         </div>
     )
