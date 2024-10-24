@@ -2,6 +2,8 @@
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 import Pipper_version2 from './pages/Pipper_version2';
 import MainPage from './pages/MainPage';
+import MainpageButton
+
 // Importer stylesheet 
 import './App.css';
 

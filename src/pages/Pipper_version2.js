@@ -9,10 +9,6 @@ import '../App.css';
 // import logo from './logo.svg';
 
 function Pipper_version2() {
-  return (
-    <p>Hello World</p>
-
-  )
 }
 
 
