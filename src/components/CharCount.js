@@ -1,4 +1,3 @@
-import React from 'react';
 
 function CharCount({ maxChars, currentLength }) {
   return (

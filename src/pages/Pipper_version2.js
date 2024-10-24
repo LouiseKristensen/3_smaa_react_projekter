@@ -19,7 +19,6 @@ function Pipper_version2() {
     <div style={Pipperstyle}>
     <SidebarPipper/>
     </div>
-    <Feed/>
     <Modal/>
     <Pip/>
     </div>
