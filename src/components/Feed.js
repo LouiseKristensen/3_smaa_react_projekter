@@ -5,7 +5,7 @@ import Modal from './Modal'; // Import Modal komponent
 function Feed({ pips }) { // Modtag pips som prop
   return (
     <div className="feed">
-      <button onclick="openModal(modal-open)">Opret pip</button>
+      <button onclick="openModal(Modal)">Opret pip</button>
 
       <div>
       <h2>Latest Pips</h2>

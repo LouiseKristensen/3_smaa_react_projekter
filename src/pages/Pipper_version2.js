@@ -20,7 +20,7 @@ function Pipper_version2() {
     </div>
     <Feed/>
     <Modal/>
-    <pips/>
+    <Pip/>
     </div>
   )
 }
