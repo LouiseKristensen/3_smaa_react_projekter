@@ -26,10 +26,10 @@ function MainPage(){
             <Link to="/pipper" style={{textDecoration: 'none'}}>Pipper Projekt</Link>
         </button>
         <button style={buttonStyling}>
-            <Link to="/pipper" style={{textDecoration: 'none'}}>Pipper Projekt</Link>
+            <Link to="/kontaktbog" style={{textDecoration: 'none'}}>Kontaktbog Projekt</Link>
         </button>
         <button style={buttonStyling}>
-            <Link to="/pipper" style={{textDecoration:'none'}}>Pipper Projekt</Link>
+            <Link to="/clothstore" style={{textDecoration:'none'}}>Tøjbutik Projekt</Link>
         </button>
         </div>
     )
