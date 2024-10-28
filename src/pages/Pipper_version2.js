@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 // Import af komponenter
 import SidebarPipper from '../components/SideBarPipper';
 import Feed from '../components/Feed';
-import Modal from '../components/Modal';
+import PipModal from '../components/PipModal';
 import Pip from '../components/Pip';
 
 
@@ -19,8 +19,7 @@ function Pipper_version2() {
     <div style={Pipperstyle}>
     <SidebarPipper/>
     </div>
-    <Modal/>
-    <Pip/>
+    <Feed/>
     </div>
   )
 }
