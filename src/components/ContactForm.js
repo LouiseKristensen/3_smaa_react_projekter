@@ -8,6 +8,7 @@ function ContactForm() {
     const [company, setCompany] = useState('');
     const [position, setPosition] = useState('');
     const [error, setError] = useState(null); 
+    const [contacts, setContacts] = useState([]);
 
 
     const handleOnContactChange = (e) => {
@@ -41,7 +42,8 @@ function ContactForm() {
             if (firstname === '' || lastname === '' || email === '') {
                 setError('Cannot add empty field.');
               } else {
-                setError(null);
+                const newContactArray = [...contacts, {id: contacts.length + 1, firstname, lastname, email, phone, company, position}];
+                setContacts(newContactArray);
                 console.log("Contact added:", { firstname, lastname, email, phone, company, position });
                 setFirstname('');
                 setLastname('');
@@ -91,7 +93,7 @@ function ContactForm() {
                             Email 
                         </label>
                         <input
-                            type='text'
+                            type='email'
                             id='email'
                             name='email'
                             placeholder='Email'
@@ -140,7 +142,7 @@ function ContactForm() {
                             onChange={handleOnContactChange}
                         />
                     </div>
-
+                        {error && <p style={{ color: 'red' }}>{error}</p>}  
                     <div>
                         <button type='submit' onClick={handleAddContact}>Tilføj kontakt</button>
                     </div>
