@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import SidebarPipper from '../components/SideBarPipper';
 import Feed from '../components/Feed';
 import PipModal from '../components/PipModal';
-import Pip from '../components/Pip';
 
 
 function Pipper_version2() {
