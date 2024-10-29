@@ -40,7 +40,7 @@ function ContactForm() {
 
         function handleAddContact(e) {
             if (firstname === '' || lastname === '' || email === '') {
-                setError('Cannot add empty field.');
+                setError('Cannot add empty Firstname, Lastname or Email fields.');
               } else {
                 const newContactArray = [...contacts, {id: contacts.length + 1, firstname, lastname, email, phone, company, position}];
                 setContacts(newContactArray);

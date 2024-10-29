@@ -1,3 +1,5 @@
+import ContactForm from "./ContactForm"; 
+
 const ConctactCardStyle = {
     margin: '16px',
     border: 'Solid',
