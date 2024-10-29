@@ -1,5 +1,5 @@
 // Importer React
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
 // Import af komponenter
 import SidebarPipper from '../components/SideBarPipper';
