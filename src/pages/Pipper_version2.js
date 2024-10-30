@@ -29,13 +29,10 @@ function Pipper_version2() {
   return (
     <div>
         <h1 
-            style={{
-                borderBottom: '5px solid black', 
-                paddingBottom: '12px', 
-                marginBottom: '0px', 
-                paddingLeft: '30px'}}>
+            style={{ borderBottom: '5px solid black', paddingBottom: '12px', marginBottom: '0px', paddingLeft: '30px'}}>
         <FontAwesomeIcon icon={faDove} 
-            style={{ padding: '0 12px' }}/>
+            style={{ padding: '0 12px' }}
+        />
         Pipper</h1> 
     <div style={PipperStyle}>
     <div style={SideBarstyle}>
@@ -43,17 +40,8 @@ function Pipper_version2() {
     </div>
     <div style={PipsFeedStyle}>
         <h2 
-        style={{ 
-            textAlign: 'center', 
-            border: 'solid black', 
-            borderRadius: '8px',
-            padding: '12px', 
-            display: 'flex', 
-            justifyContent: 'center', 
-            alignItems: 'center', 
-            width: '100%', 
-            margin: '20px auto'
-         }}>Pips Feed</h2>
+            style={{ textAlign: 'center', border: 'solid black', borderRadius: '8px', padding: '12px', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', margin: '20px auto'}}
+        >Pips Feed</h2>
         <PipModal pips={pips} setPips={setPips} style={{ width: '75%' }}/>
     </div>
     </div>
