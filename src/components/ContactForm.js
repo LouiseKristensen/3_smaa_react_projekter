@@ -38,7 +38,9 @@ function ContactForm() {
           }
         };
 
-        function handleAddContact(e) {
+        const handleAddContact = (e) => {
+            e.preventDefault();
+
             if (firstname === '' || lastname === '' || email === '') {
                 setError('Cannot add empty Firstname, Lastname or Email fields.');
               } else {
@@ -58,7 +60,7 @@ function ContactForm() {
         <section>
             <div>
                 <div>
-                    <form>
+                    <form onSubmit={handleAddContact}>
                     <h2>Kontaktoplysninger</h2>
                     <div>
                         <label>
