@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHouse, faUser, faMessage, faBell, faGear, faPhone, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { icon } from '@fortawesome/fontawesome-svg-core'
 
 function SidebarPipper(){
 
@@ -7,7 +8,6 @@ function SidebarPipper(){
         borderRadius: '8px',
         padding: '12px', 
         display: 'flex',
-        width: '20%',
         height: '100vh',
         borderRight: 'solid',
         backgroundColor: 'lightGrey',
@@ -21,21 +21,25 @@ function SidebarPipper(){
         alignItems: 'center',
         listStyle: 'none',
         border: 'solid',
-        borderRadius: '12px'
+        borderRadius: '12px',
         }
+
+    const iconStyle = {
+        padding: '8px 0',
+    }
 
 
 
     return (
         <div className="sidebar" style={sidebarStyle}>
             <div className="menu" style={sideMenuStyle}>
-                    <li><FontAwesomeIcon icon={faHouse}/> Home</li>
-                    <li><FontAwesomeIcon icon={faUser}/> Profile</li>
-                    <li><FontAwesomeIcon icon={faMessage}/> Messages</li>
-                    <li><FontAwesomeIcon icon={faBell}/> Notifications</li>
-                    <li><FontAwesomeIcon icon={faGear}/> Settings</li>
-                    <li><FontAwesomeIcon icon={faPhone}/> Support</li>
-                    <li><FontAwesomeIcon icon={faRightFromBracket}/> Logout</li>
+                    <li style={iconStyle}><FontAwesomeIcon icon={faHouse}/> Home</li>
+                    <li style={iconStyle}><FontAwesomeIcon icon={faUser}/> Profile</li>
+                    <li style={iconStyle}><FontAwesomeIcon icon={faMessage}/> Messages</li>
+                    <li style={iconStyle}><FontAwesomeIcon icon={faBell}/> Notifications</li>
+                    <li style={iconStyle}><FontAwesomeIcon icon={faGear}/> Settings</li>
+                    <li style={iconStyle}><FontAwesomeIcon icon={faPhone}/> Support</li>
+                    <li style={iconStyle}><FontAwesomeIcon icon={faRightFromBracket}/> Logout</li>
             </div>
         </div>
         )}
