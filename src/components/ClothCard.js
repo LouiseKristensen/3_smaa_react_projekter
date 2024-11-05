@@ -25,7 +25,7 @@ const ButtonStyle = {
     cursor: 'pointer',                           
 }
 
-function ClothCard (){
+function ClothCard ({onAddToCart}){
     const [clothOptions, setClothOptions] = useState(
         [{id: 1, 
             brand: "Nike", 
@@ -72,12 +72,10 @@ function ClothCard (){
             description: "A lightweight, insulated jacket that provides warmth without bulk, made from recycled materials."}]
     );
 
-    function handleAddToCart(){
-        if (clothOptions.selected === true){
-            console.log("Added to cart");
-        } else {
-            console.log("Not added to cart");}
-        }
+    function handleAddToCart(cloth){
+        onAddToCart(cloth);
+        setClothOptions(clothOptions.filter(item => item.id !== cloth.id));
+    };
 
 
     return (
