@@ -19,6 +19,7 @@ const modalStyles = {
       width: '400px',
       borderRadius: '10px',
       boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
+      position: 'relative',
     },
     input: {
       width: '95%',
@@ -33,17 +34,33 @@ const modalStyles = {
         marginTop: '20px',
     },
     button: {
-      marginRight: '10px',
+      // marginRight: '10px',
+      // padding: '10px 20px',
+      // backgroundColor: '#007BFF',
+      // color: 'white',
+      // border: 'none',
+      // borderRadius: '5px',
+      // cursor: 'pointer',
       padding: '10px 20px',
-      backgroundColor: '#007BFF',
+      borderRadius: '5px',
+      backgroundColor: '#3d3c3c',
       color: 'white',
       border: 'none',
-      borderRadius: '5px',
+      fontSize: '16px',
       cursor: 'pointer',
     },
     closeButton: {
-      backgroundColor: '#f44336',
-      marginTop: '12px',
+      // backgroundColor: '#f44336',
+      // marginTop: '12px',
+      position: 'absolute',
+      top: '10px',
+      right: '10px',
+      background: 'transparent',
+      border: 'none',
+      fontSize: '20px',
+      cursor: 'pointer',
+      color: '#999',
+        
     },
   };
 
@@ -73,6 +90,7 @@ const Modal = ({ onClose, onSubmit }) => {
   return (
     <div className="modal" style={modalStyles.modal}>
       <div className="modal-content" style={modalStyles.modalContent}>
+      <button style={modalStyles.closeButton} onClick={onClose}>X</button>
         <h2>Indtast information</h2>
         <form onSubmit={handleSubmit}>
           <input
@@ -132,7 +150,7 @@ const Modal = ({ onClose, onSubmit }) => {
           <div style={modalStyles.buttonContainer}>
           <button style={modalStyles.button} type="submit">Submit</button>
         
-        <button style={modalStyles.closeButton} onClick={onClose}>Close</button>
+        {/* <button style={modalStyles.closeButton} onClick={onClose}>Close</button> */}
         </div>
         </form>
       </div>

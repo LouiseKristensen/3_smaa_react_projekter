@@ -16,6 +16,15 @@ const ClothCardLokationStyle = {
     // width: '75%',
 }
 
+const ButtonStyle = {
+    padding: '10px 20px',  
+    fontSize: '12px',           
+    borderRadius: '5px',            
+    backgroundColor: 'lightgrey',   
+    color: '#000',                   
+    cursor: 'pointer',                           
+}
+
 function ClothCard (){
     const [clothOptions, setClothOptions] = useState(
         [{id: 1, 
@@ -81,7 +90,7 @@ function ClothCard (){
                     <p><strong>Price:</strong> ${cloth.price}</p>
                     <p><strong>Color:</strong> {cloth.color}</p>
                     <p><strong>Description:</strong> {cloth.description}</p>
-                    <button type='button' onClick={handleAddToCart} >Add to cart</button>
+                    <button type='button' onClick={handleAddToCart} style={ButtonStyle}>Add to cart</button>
                 </div>
             ))
         }

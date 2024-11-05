@@ -11,10 +11,10 @@ const ContactCard = ({ data }) => {
             <h2>Person</h2>
             <li>Fornavn: {data.firstName}</li>
             <li>Efternavn: {data.lastName}</li>
-            <li>Email {data.email}</li>
-            <li>Telefon {data.phone}</li>
-            <li>Firma {data.firm}</li>
-            <li>Stilling {data.position}</li>
+            <li>Email: {data.email}</li>
+            <li>Telefon: {data.phone}</li>
+            <li>Firma: {data.firm}</li>
+            <li>Stilling: {data.position}</li>
         </div>
     )
 }
