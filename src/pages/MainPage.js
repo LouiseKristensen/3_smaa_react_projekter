@@ -13,7 +13,7 @@ function MainPage(){
         borderRadius: '12px',
         padding: '12px',
         margin: '12px',
-        backgroundColor: 'Green',
+        backgroundColor: '#8ced47',
         color: 'white'
     }
 

@@ -5,16 +5,16 @@ const ConctactCardStyle = {
     backgroundColor: '#f9f9f9',
 }
 
-function ContactCard(contact){
+const ContactCard = ({ data }) => {
     return (
         <div style={ConctactCardStyle}>
-            <h2>PErson</h2>
-            <li>Fornavn: {contact.firstname}</li>
-            <li>Efternavn: {contact.lastname}</li>
-            <li>Email {contact.email}</li>
-            <li>Telefon {contact.phone}</li>
-            <li>Firma {contact.company}</li>
-            <li>Stilling {contact.position}</li>
+            <h2>Person</h2>
+            <li>Fornavn: {data.firstName}</li>
+            <li>Efternavn: {data.lastName}</li>
+            <li>Email {data.email}</li>
+            <li>Telefon {data.phone}</li>
+            <li>Firma {data.firm}</li>
+            <li>Stilling {data.position}</li>
         </div>
     )
 }
