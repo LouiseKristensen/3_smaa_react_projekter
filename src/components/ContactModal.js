@@ -148,7 +148,7 @@ const Modal = ({ onClose, onSubmit }) => {
             required
           />
           <div style={modalStyles.buttonContainer}>
-          <button style={modalStyles.button} type="submit">Submit</button>
+          <button style={modalStyles.button} type="submit">Tilføj</button>
         
         {/* <button style={modalStyles.closeButton} onClick={onClose}>Close</button> */}
         </div>
