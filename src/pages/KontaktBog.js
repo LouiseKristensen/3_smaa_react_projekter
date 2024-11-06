@@ -2,13 +2,6 @@ import React, { useState } from "react";
 import Modal from "../components/ContactModal";
 import ContactCard from "../components/ContactCard";
 
-// const KontaktBogStyle = {
-//     display: 'flex',
-//     maxWidth: '100vw',
-//     justifyContent: 'Center',
-//     flexWrap: 'Wrap'
-// }
-
 const ContactBookStyle = {
     display: 'flex', 
     justifyContent: 'space-between', 
@@ -56,7 +49,6 @@ const KontaktBog = () => {
         <h1 
             style={{ borderBottom: '5px solid black', paddingBottom: '15px', paddingLeft: '50px'}}>
         Kontaktbog</h1> 
-      {/* <h1>Kontaktbog</h1> */}
       <div style={ContactBookStyle }>
         <div style={TextStyle}>
             <p><strong>Velkommen til din kontaktbog!</strong></p>
