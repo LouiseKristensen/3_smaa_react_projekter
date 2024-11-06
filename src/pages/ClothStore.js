@@ -88,7 +88,7 @@ function ClothStore() {
             </div>
             <div style={ClothCardLokationStyle}>
             {/* <h1 style={{ textAlign: 'center' }}>Tøjbutikken Unikt tøj</h1> */}
-            <ClothCard/>
+            <ClothCard clothOptions={clothOptions} onAddToCart={handleAddToCart} />
             </div>
         </div>
         </div>
