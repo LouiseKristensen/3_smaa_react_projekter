@@ -1,46 +1,10 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
-// import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-// import React, { useState } from "react";
-
-
-// function SidebarCloth({ cartItems, onRemoveFromCart }){
-//     const [showModal, setShowModal] = useState(false);
-    
-//     const sideMenuStyle = {
-//         padding: '16px',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         listStyle: 'none',
-//         borderRadius: '12px'
-//         }
-
-//         const sidebarStyle = {
-//             borderRadius: '8px',
-//             padding: '12px', 
-//             display: 'flex',
-//             height: '110vh',
-//             borderRight: 'solid',
-//             backgroundColor: 'lightGrey',
-//             justifyContent: 'center',
-//         }
-
-//     return (
-//         <div className="sidebar" style={sidebarStyle}>
-//             <div className="menu" style={sideMenuStyle}>
-//                     <li><FontAwesomeIcon icon={faShoppingCart} style={{ fontSize: '24px', marginTop: '50px' }}/></li>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default SidebarCloth; 
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import ClothCard from './ClothCard';
 
 const customStyles = {
   content: {
@@ -68,12 +32,13 @@ const sidebarStyle = {
     display: 'flex',
     height: '110vh',
     borderRight: 'solid',
+    flexDirection: 'Column',
     backgroundColor: 'lightGrey',
-    justifyContent: 'center',
 }
 
 const sideMenuStyle = {
     menuPlacement: {
+        display: 'flex',
         padding: '16px',
         justifyContent: 'center',
         alignItems: 'center',
@@ -85,56 +50,47 @@ const sideMenuStyle = {
         border: 'none',   
         padding: 0,         
         cursor: 'pointer'
-    }
+    },
+    
 };
 
+const cartStyle = {
+  display: 'flex',
 
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#root');
+} 
 
-export default function SideBarCloth ({ cartItems, onRemoveFromCart }) {
-  let subtitle;
+function SideBarCloth({ cartItems }) {
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
-    setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = 'black';
+      setIsOpen(true);
   }
 
   function closeModal() {
-    setIsOpen(false);
+      setIsOpen(false);
   }
 
   return (
-    <div className="sidebar" style={sidebarStyle}>
-    <div className="menu" style={sideMenuStyle.menuPlacement}>
-    <div>
-        <button onClick={openModal} style={sideMenuStyle.shoppingCart}>
-            <FontAwesomeIcon icon={faShoppingCart} style={{fontSize: '24px', marginTop: '50px'}}/>
-        </button>
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Shopping Cart Modal">
-        
-        <button onClick={closeModal} className="modal-close" style={{ position: 'absolute', top: '10px', right: '10px' }}>
-            x
-        </button>
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)} className="modal-title" style={{ textAlign: 'center', marginBottom: '20px' }}>Indkøbskurv</h2>
-        {/* <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}> */}
-        
-        
-        {/* </form> */}
-      </Modal>
-
+    <div style={sidebarStyle}>
+        <h2>Indkøbskurv</h2>
+        <div style={cartStyle}>
+        {cartItems.length === 0 ? (
+            <p>Indkøbskurven er tom</p>
+        ) : (
+            <ul style={sideMenuStyle}>
+                {cartItems.map((item) => (
+                    <li key={item.id}>
+                        <p>{item.brand} - {item.model}</p>
+                        <p><strong>pris:</strong> ${item.price}</p>
+                    </li>
+                ))}
+            </ul>
+          
+        )}
+        </div>
     </div>
-    </div>
-    </div>
-  );   
+);
 }
+
+
+export default SideBarCloth; 
